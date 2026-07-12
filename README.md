@@ -53,6 +53,27 @@ CRUD         CRUD       Assign Driver     Service Log    Fuel Log    KPI Charts
 Status       License    Assign Vehicle    Status Update  Expenses    Export CSV
 Update       Check      Complete Trip     Available      Cost        Performance
 
+
+Project structure
+
+```
+transitops/
+├── backend/
+│   ├── config/db.js          MongoDB connection
+│   ├── models/                Mongoose schemas (User, Vehicle, Driver, Trip, Maintenance, FuelLog, Expense)
+│   ├── controllers/           Business logic + validation rules
+│   ├── routes/                Express route definitions
+│   ├── middleware/             JWT auth + role-based access control
+│   ├── seed/seed.js            Demo data generator
+│   └── server.js
+└── frontend/
+    └── src/
+        ├── pages/              Login, Register, Dashboard, Vehicles, Drivers, Trips, Maintenance, FuelExpenses, Reports
+        ├── components/         Sidebar layout, KPI cards, gauge chart, modal, status badges
+        ├── context/AuthContext.jsx
+        └── api/axios.js
+```
+
 🛠️ Tech Stack
 
 Frontend
